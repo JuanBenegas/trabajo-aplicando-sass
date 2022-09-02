@@ -1,0 +1,185 @@
+// IMPORTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+// font-family: 'Montserrat', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+// font-family: 'Poppins', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1.7fr 1.7fr 1.7fr 0.4fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav nav"
+      "section-one section-one"
+      "section-two section-three"
+      "section-four section-five"
+      "footer footer";
+  }
+  
+.nav{
+    grid-area: nav; 
+    display: flex;
+    background-color: #02111B;
+    height: 95px;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+            display: inline;
+            margin-left: 20px;
+            a{
+                color: white;
+                text-decoration: none;
+                padding: 6px 15px;
+                border-radius: 20px;
+                font-family: 'Montserrat', sans-serif;
+                transition: .5s;
+            }
+            a:hover{
+                background-color: white;
+                color: #02111B;
+                font-style: italic;
+            }
+            img{
+                max-width: 80px;
+            }
+        }
+    }
+
+}
+  
+.section-one{
+    grid-area: section-one; 
+    background-image: url(../assets/section-one-background.jpeg);
+    height: 782px;
+
+}
+  
+.section-two{ 
+    grid-area: section-two; 
+    background-image: url(../assets/bolsa-cafe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.section-three{
+    grid-area: section-three; 
+    background-color: #3F4045;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .sec-three-container{
+        margin-left: 120px;
+        h1{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        p{
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            margin: 30px;
+            margin-top: 20px;
+            border-style: solid;
+            padding: 10px;
+            transition: .5s;
+            border-radius: 10px;
+        }
+        a:hover{
+            background-color: white;
+            color: #3F4045;
+            border-style: solid;
+            border-color: white;
+        }
+    }
+    
+}
+  
+.section-four{
+    grid-area: section-four; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .sec-four-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-style: italic;
+        }
+        p{
+            max-width: 561px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            margin: 30px;
+            margin-top: 20px;
+            border-style: solid;
+            padding: 10px;
+            transition: .5s;
+            border-radius: 10px;
+        }
+        a:hover{
+            background-color: black;
+            color: white;
+            border-style: solid;
+            border-color: black;
+        }
+    }
+}
+  
+.section-five{
+    grid-area: section-five; 
+    background-image: url(../assets/torta-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.footer{
+    grid-area: footer; 
+    background-color: #1b1f23;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    h2{
+        color: white;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    a{
+        text-decoration: none;
+        color: #808080;
+    }
+    a:hover{
+        color: white;
+    }
+    .container-one{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img{
+            max-width: 150px;
+        }
+    }
+    
+}
+  
